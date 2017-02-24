@@ -1,0 +1,30 @@
+{
+  "name": "gendev",
+  "version": "1.0.0",
+  "description": "Developing with Node and Express and Handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rasp4dock/gendev.git"
+  },
+  "keywords": [
+    "Web",
+    "Server",
+    "NPM",
+    "NODE",
+    "EXPRESS"
+  ],
+  "author": "Mc Oforha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rasp4dock/gendev/issues"
+  },
+  "homepage": "https://github.com/rasp4dock/gendev#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0"
+  }
+}

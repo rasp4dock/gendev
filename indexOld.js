@@ -1,8 +1,6 @@
 var express = require("express");
 //view engine setup(express-handlebars)
-//call the module
 
-var wisesayings = require("./lib/wisesayings.js")
 var app = express();
 var handlebars  = require('express-handlebars')
         .create({defaultLayout: 'main'});
@@ -14,7 +12,7 @@ app.set('view engine', 'handlebars');
 app.set("port", process.env.PORT || 8080);
 
 app.use(express.static(__dirname = "/public"));
-/*var theySay = [
+var theySay = [
     "Whenever possible, keep it simple.",
 	"Conquer your fears or they will conquer you.",
 	"Rivers need springs.",
@@ -23,15 +21,20 @@ app.use(express.static(__dirname = "/public"));
 	"We The People are the Universe and the change."
 
 ];
-*/
+
 
 
 app.get("/", function(req, res){
     res.render("home");
     //res.type("text/plain");
  // res.send("Travel Austria and explore the Nature");  
-  //   theySay.length)];
-	res.render('about', { wisesayings: wisesayings.theSaying})
+    
+});
+
+app.get('/about', function(req,res){
+	var wiseSayings = 
+		theySay[Math.floor(Math.random() * theySay.length)];
+	res.render('about', { theySay: wiseSayings})
 	
 });
 
